@@ -6,7 +6,7 @@
 # catalog-version 1.3b
 Name:		texlive-trivfloat
 Version:	1.3b
-Release:	6
+Release:	7
 Summary:	Quick float definitions in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/trivfloat
