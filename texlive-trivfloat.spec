@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/trivfloat
-# catalog-date 2009-04-24 13:36:42 +0200
-# catalog-license lppl
-# catalog-version 1.3b
 Name:		texlive-trivfloat
-Version:	1.3b
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Quick float definitions in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/trivfloat
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ types. The package works with memoir as well as the standard
 classes.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,23 +39,11 @@ classes.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3b-2
-+ Revision: 757136
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.3b-1
-+ Revision: 719807
-- texlive-trivfloat
-- texlive-trivfloat
-- texlive-trivfloat
-
