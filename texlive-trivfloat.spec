@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Quick float definitions in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/trivfloat
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/trivfloat
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/trivfloat.doc.r%{version}.tar.xz
